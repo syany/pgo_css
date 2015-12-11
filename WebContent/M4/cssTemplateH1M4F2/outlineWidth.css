@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*
+ * @(#)outline.css 1.00 2009/06/01;
+ * 
+ * 本書はBSD改め拍手ライセンスです。
+ * Copyright (c) 2009 syany
+ * All rights reserved.
+ * 
+ * 1.ソースコード形式であれバイナリ形式であれ、変更の有無に関わらず
+ *   以下の条件を満たす限りにおいて、再配布および利用を許可します。
+ *  1-1.ソースコード形式で再配布する場合、上記著作権表示、 本条件書
+ *    および第2項の責任限定規定を必ず含めてください。
+ *  1-2.バイナリ形式で再配布する場合、上記著作権表示、 本条件書
+ *    および下記責任限定規定を、配布物とともに提供される文書
+ *    および/または他の資料に必ず含めてください。
+ * 
+ * 2.本ソフトウェアは無保証です。自己責任で使用してください。
+ *  2-1.使用、再配布する際、できれば以下のページに拍手をください。
+ *    http://ksyany.blog32.fc2.com/blog-entry-51.html
+ * 
+ * 3.著作権者の名前を、広告や宣伝に勝手に使用しないでください。
+ */
+/*============================================================*/
+/**
+ * 構造スタイル <幅、高さ>
+ *  ヘッダ、ボディ(メイン)、フッターの定義、幅、高さの設定
+ *  すべての構造スタイルはクラス名にOutlineがつく
+ *  [記述可能プロパティ]
+ *   width
+ *   hight
+ *  [備考]
+ *   ※ カラムを作成したセレクタは、こちらで必ず幅を設定すること
+ *   以下にレイアウト例を示す
+ *   
+ *   + Header --------------------------------------+
+ *   + Left ------------+ Right --------------------+
+ *   |                  |                           |
+ *   + Main +-----------+---------------------------+
+ *   + Left + Right --+-----------------------------+
+ *   |      | Child L + Child R -----+--------------+
+ *   |      |         | GrandChild L | GrandChild R |
+ *   +------+---------+--------------+--------------+
+ *   | Footer                                       |
+ *   +----------------------------------------------+
+ *************************************************************/
+/* 全体の大きさ */
+div.Outline.Container {
+	width:					800px;
+}
+
+/* メイン(左)の大きさ */
+div.Outline.Main div.Outline.Left {
+	width:					80px;
+}
+/* メイン(大右)の大きさ {*/
+div.Outline.Main div.Outline.Right {
+	width:					720px;
+}
+/* メイン中央(右->右)の大きさ */
+div.Outline.Main div.Outline.Right div.Outline.Left {
+	width:					420px;
+}
+/* メイン(右->右)の大きさ {*/
+div.Outline.Main div.Outline.Right div.Outline.Right {
+	width:					300px;
+}
+/* メイン(右->右->左)の大きさ {*/
+div.Outline.Main div.Outline.Right div.Outline.Right div.Outline.Left {
+	width:					150px;
+}
+/* メイン(右->右->右)の大きさ {*/
+div.Outline.Main div.Outline.Right div.Outline.Right div.Outline.Right {
+	width:					150px;
+}
+
+/* フッター(左)の大きさ */
+div.Outline.Footer div.Outline.Left {
+	width:					500px;
+}
+/* フッター(右)の大きさ */
+div.Outline.Footer div.Outline.Right {
+	width:					300px;
+}

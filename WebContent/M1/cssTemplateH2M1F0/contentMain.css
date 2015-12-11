@@ -1,0 +1,527 @@
+@charset "utf-8";
+/*
+ * @(#)contentMain.css 1.00 2009/06/12;
+ * 
+ * 本書はBSD改め拍手ライセンスです。
+ * Copyright (c) 2009 syany
+ * All rights reserved.
+ * 
+ * 1.ソースコード形式であれバイナリ形式であれ、変更の有無に関わらず
+ *   以下の条件を満たす限りにおいて、再配布および利用を許可します。
+ *  1-1.ソースコード形式で再配布する場合、上記著作権表示、 本条件書
+ *    および第2項の責任限定規定を必ず含めてください。
+ *  1-2.バイナリ形式で再配布する場合、上記著作権表示、 本条件書
+ *    および下記責任限定規定を、配布物とともに提供される文書
+ *    および/または他の資料に必ず含めてください。
+ * 
+ * 2.本ソフトウェアは無保証です。自己責任で使用してください。
+ *  2-1.使用、再配布する際、できれば以下のページに拍手をください。
+ *    http://ksyany.blog32.fc2.com/blog-entry-51.html
+ * 
+ * 3.著作権者の名前を、広告や宣伝に勝手に使用しないでください。
+ */
+/*============================================================*/
+/**
+ * 内容スタイル
+ *  ここでは、細やかな設定を記述します。
+ *  プロパティはルールに沿ったグループ別になります。
+ * Usable elements
+ *  - BLOCKS -
+ *  html head body title base style script noscript link meta 
+ *  div p
+ *  h1 h2 h3 h4 h5 h6
+ *  table tbody td tfoot th thead tr caption col colgroup
+ *  ol ul li dl dt dd
+ *  form fieldset input button legend
+ *  select optgroup option 
+ *  address blockquote hr pre del ins param
+ *  * button input select
+ *  
+ *  - INLINES -
+ *  a span
+ *  q em strong cite code dfn abbr acronym kbd samp
+ *  label
+ *  b i area sub sup var tt big small
+ *  br img map object textarea
+ *  bdo
+ *  * img object
+ *************************************************************/
+/**
+ * 内容スタイル <配置>
+ *  各種内容の、配置、スクロール有無などの設定
+ *  [記述可能プロパティ]
+ *   position
+ *   top
+ *   right
+ *   bottom
+ *   left
+ *   float
+ *   clear
+ *   z-index
+ *   overflow
+ *   clip
+ *   visibility
+ *   display
+ *************************************************************/
+
+/**
+ * 内容スタイル <幅、高さ>
+ *  各種内容別、幅、高さの設定
+ *  [記述可能プロパティ]
+ *   width
+ *   hight
+ *************************************************************/
+/* ページタイトル画像用縦枠 */
+div.HeaderLeftColumn div.HeadTitle {
+	height:					70px;
+}
+/**
+ * 内容スタイル <幅、高さ>
+ *  各種内容別、幅、高さの設定
+ *  [記述可能プロパティ]
+ *   width
+ *   hight
+ *************************************************************/
+
+/**
+ * 内容スタイル <ブロックマージン、ボーダー、パッディング>
+ *  各アイテムブロックマージン、境界線、領域
+ *  ただし、色、画像は別グループ
+ *  [記述可能プロパティ]
+ *   margin-top
+ *   margin-right
+ *   margin-bottom
+ *   margin-left
+ *   border-top-width
+ *   border-top-style
+ *   border-right-width
+ *   border-right-style
+ *   border-bottom-width
+ *   border-bottom-style
+ *   border-left-width
+ *   border-left-style
+ *   padding-top
+ *   padding-right
+ *   padding-bottom
+ *   padding-left
+ *************************************************************/
+* html body,
+html body,
+body {
+	margin-top:				0;
+	margin-left:			auto;
+	margin-right:			auto;
+}
+/* IE6以外対応版 ブログ全体を中央表示にする */
+div.Container {
+	margin-left:			auto;
+	margin-right:			auto;
+}
+/* ヘッダマージン設定 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom:			0;
+}
+h1,
+h2 {
+	margin-top:				0;
+}
+h1 {
+	margin-left:			0.3em;
+	margin-right:			0.3em;
+}
+h2 {
+	margin-left:			0;
+	margin-right:			0.2em;	
+}
+h3,
+h4,
+h5,
+h6 {
+	margin-top:				0.5em;
+	margin-left:			0.2em;
+	margin-right:			0.2em;	
+}
+/* 基本グループ枠マージン */
+div {
+	margin-top:				0;
+	margin-bottom:			0;
+}
+p {
+	margin-top:				0;
+	margin-bottom:			0;
+}
+/* 表マージン */
+table {
+	margin-left:			auto;
+	margin-right:			auto;
+}
+caption {
+	margin-left:			auto;
+	margin-right:			auto;
+}
+th,
+td {
+	border-right-width:		2px;
+	border-right-style:		groove;
+	border-bottom-width:	2px;
+	border-bottom-style:	groove;
+}
+/* リストマージン */
+ol,
+ul,
+dl {
+	margin-top:				0;
+	margin-bottom:			0;
+}
+/* 引用マージン */
+q {
+	border-bottom-width:	3px;
+	border-bottom-style:	double;
+}
+/* コードマージン */
+code {
+	border-right-width:		2px;
+	border-right-style:		groove;
+	border-bottom-width:	2px;
+	border-bottom-style:	groove;
+}
+/* 略字 */
+abbr,acronym {
+	border-bottom-width:	1px;
+	border-bottom-style:	dashed;
+}
+
+/* 記事枠 */
+div.MainCenterColumn div.Article {
+	margin-left:			2px;
+	margin-top:				2px;
+	margin-right:			2px;
+	margin-bottom:			2px;
+	padding-left:			0.4em;
+	padding-right:			0.4em;
+}
+/* 記事ヘッドライン */
+div.MainCenterColumn h2 {
+	border-left-width:		5px;
+	border-left-style:		solid;
+	border-bottom-width:	1px;
+	border-bottom-style:	dashed;
+	padding-left:			0.2em;
+}
+
+div.MainCenterColumn h3 {
+	border-left-width:		5px;
+	border-left-style:		double;
+	padding-left:			0.2em;
+}
+
+/* 引用マージン、枠 */
+div.MainCenterColumn blockquote {
+	margin-left:			1px;
+	margin-top:				0;
+	margin-right:			0;
+	margin-bottom:			0;
+	border-top-width:		1px;
+	border-top-style:		dashed;
+	border-left-width:		5px;
+	border-left-style:		solid;
+	border-right-width:		1px;
+	border-right-style:		dashed;
+	border-bottom-width:	1px;
+	border-bottom-style:	dashed;
+	padding-top:			1px;
+	padding-left:			1px;
+	padding-right:			1px;
+	padding-bottom:			1px;
+}
+/* 区切り線マージン */
+div.MainCenterColumn hr {
+	margin-left:			0.3em;
+	margin-right:			0.3em;
+}
+/* プレーン文字列マージン */
+div.MainCenterColumn pre {
+	border-top-width:		1px;
+	border-top-style:		solid;
+	border-left-width:		1px;
+	border-left-style:		solid;
+	border-right-width:		2px;
+	border-right-style:		groove;
+	border-bottom-width:	2px;
+	border-bottom-style:	groove;
+}
+
+/* フォームマージン */
+div.MainCenterColumn input {
+	margin-left:			auto;
+	margin-right:			auto;
+}
+
+/* キーボードボタンスタイル */
+div.MainCenterColumn kbd {
+	border-top-width:		1px;
+	border-top-style:		solid;
+	border-right-width:		1px;
+	border-right-style:		solid;
+	border-bottom-width:	1px;
+	border-bottom-style:	solid;
+	border-left-width:		1px;
+	border-left-style:		solid;
+	padding-top:			0.1em;
+	padding-bottom:			0.1em;
+}
+/* サンプルマージン */
+div.MainCenterColumn samp {
+	border-top-width:		1px;
+	border-top-style:		dotted;
+	border-right-width:		1px;
+	border-right-style:		solid;
+	border-bottom-width:	1px;
+	border-bottom-style:	dotted;
+	border-left-width:		1px;
+	border-left-style:		solid;
+}
+
+/**
+ * 内容スタイル <テーブル、リスト>
+ *  テーブル、リストの細かい設定
+ *  ただし、色、画像は別グループ
+ *  [記述可能プロパティ]
+ *   caption-side
+ *   table-layout
+ *   border-collapse
+ *   border-spacing
+ *   empty-cells
+ *   list-style-position
+ *   list-style-type
+ *************************************************************/
+
+/**
+ * 内容スタイル <フォント関連、テキスト関連>
+ *  フォント、テキスト関連
+ *  ただし、色、画像は別グループ
+ *  [記述可能プロパティ]
+ *   font-family
+ *   font-size
+ *   font-style
+ *   font-weight
+ *   font-variant
+ *   text-align
+ *   text-decoration
+ *   text-indent
+ *   text-transform
+ *   vertical-align
+ *   line-height
+ *   letter-spacig
+ *   word-spacing
+ *   white-space 
+ *************************************************************/
+/* センタリング */
+* html body,
+html body,
+body {
+	/* For IE6s Center */
+	text-align:				center;
+	font-family:			"Helvetica Neue", Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo UI", "メイリオ", Meiryo, Osaka, sans-serif;
+	font-size:				82.7%;
+}
+/* For IE6s Center */
+* html body *,
+html body *,
+body * {
+	text-align:				left;
+}
+/* 基本文字設定 */
+h1 {
+	font-size:				200%;
+}
+h2 {
+	font-size:				150%;
+}
+h3 {
+	font-size:				130%;
+	font-weight:			bold;
+}
+h4 {
+	font-size:				110%;
+	font-style:				oblique;
+	font-weight:			bold;
+	text-decoration:		underline;
+}
+h5 {
+	font-size:				100%;
+	font-style:				italic;
+	text-decoration:		overline underline;
+}
+h6 {
+	font-size:				90%;
+	font-weight:			bold;
+	text-decoration:		underline;
+}
+a {
+	text-decoration:		none;
+}
+a:hover,
+a:link:hover,
+a:visited:hover,
+a:active:hover {
+	text-decoration:		underline;
+}
+
+em {
+	font-weight:			bold;
+}
+strong {
+	text-decoration:		overline underline; 
+}
+code {
+	font-family:			Consolas, "Helvetica Neue", Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo UI", "メイリオ", Meiryo, Osaka, sans-serif;
+}
+/* キーボードスタイル */
+div.MainCenterColumn kbd {
+	line-height:			1.8em;
+}
+
+/**
+ * 内容スタイル <背景色、文字色(リンク色含)、枠色 >
+ *  各種背景、文字色、枠色
+ *  [記述可能プロパティ]
+ *   background-color
+ *   color
+ *   border-top-color
+ *   border-right-color
+ *   border-bottom-color
+ *   border-left-color
+ *************************************************************/
+/* 基本色設定 */
+* {
+	border-top-color:		#c0c0c0;
+	border-left-color:		#c0c0c0;
+	border-right-color:		#c0c0c0;
+	border-bottom-color:	#c0c0c0;
+}
+* html body,
+html body,
+body {
+	color:					#300060;
+}
+/* リンク色基本設定 */
+a {
+	color:					#3000f0;
+}
+a:visited {
+	color:					#6030c0;
+}
+a:hover,
+a:link:hover,
+a:visited:hover,
+a:active:hover {
+	color:					#f00030;
+}
+/* ページタイトル文字色 */
+h1 {
+	color:					#000050;
+}
+/* 表色 */
+thead th {
+	background-color:		#90c0c0;	
+}
+
+tbody th {
+	background-color:		#c0c090;
+}
+
+code {
+	color:					#ffffff;
+	background-color:		#00005f;
+	border-right-color:		#606060;
+	border-bottom-color:	#606060;
+}
+
+/* ページ説明文文字色 */
+div.HeaderLeftColumn p.Description {
+	color:					#000050;
+}
+
+/* 記事背景色 */
+div.MainCenterColumn div.Article {
+	background-color:		#ffffff;	
+}
+
+/* 警告色 */
+div.MainCenterColumn p.Warning {
+	color:					#ff0000;
+}
+/* 引用色 */
+div.MainCenterColumn blockquote,
+div.MainCenterColumn q {
+	border-left-color:		#c0a0a0;
+}
+div.MainCenterColumn blockquote blockquote {
+	border-left-color:		#a0c0a0;
+}
+div.MainCenterColumn blockquote blockquote blockquote {
+	border-left-color:		#a0a0c0;
+}
+
+div.MainCenterColumn pre {
+	background-color:		#dfdfdf;
+}
+
+/* URL色 */
+div.MainCenterColumn cite {
+	color:					#00c000;
+}
+
+/* キーボードスタイル枠色 */
+div.MainCenterColumn kbd {
+	border-right-color:		#606060;
+	border-bottom-color:	#606060;
+}
+
+/**
+ * 内容スタイル <画像関連 >
+ *  背景画像、背景画像配置方法。リスト画像
+ *  [記述可能プロパティ]
+ *   background-image
+ *   background-position
+ *   background-repeat
+ *   list-style-image
+ *************************************************************/
+/* 背景全画像 */
+* html body,
+html body,
+body {
+	background-image:		url(./background_basic.jpg);
+	background-position:	top left;
+	background-repeat:		repeat;
+}
+/* ページタイトル画像 */
+div.HeaderLeftColumn div.HeadTitle {
+	background-image:		url(./head_back.jpg);
+	background-position:	top left;
+	background-repeat:		no-repeat;
+}
+
+/**
+ * 内容スタイル <その他 >
+ *  印刷、カーソル、音声ブラウザの設定
+ *  [記述可能プロパティ]
+ *   page-break-after
+ *   page-break-inside
+ *   cursor
+ *   voice-family...
+ *************************************************************/
+* html body,
+html body,
+body {
+	speech-rate:			slow;
+	voice-family:			female;
+	volume:					medium;
+		
+}

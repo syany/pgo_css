@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!-- ////////////////////////////////////////////////////////////////////////////////
+/////// HEAD
+///////////////////////////////////////////////////////////////////////////////// -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8" />
+	<!-- * META 1
+	****** title前にエンコードタイプを指定。ここだけコメントは下に書きました
+	************************************************** -->
+	
+	<!-- * TITLE
+	****** headタグ唯一の必須属性
+	************************************************** -->
+	<title>Parameter Orientation Template</title>
+
+	<!-- * META 2
+	****** content属性を修正ください (###部)
+	****** 検索エンジンにヒットさせるには INDEX, FOLLOW
+	************************************************** -->
+	<meta name="robots" content="###NOINDEX, NOFOLLOW" />
+	<meta name="description" content="###このページの説明を記述します" />
+	<meta name="keywords" content="##このページのキーワードを「カンマ(,)」でリストアップします" />
+	<meta name="author" content="##作成者名を記述します" />
+	<meta name="copyright" content="&copy;2009&nbsp;##作成者名" />
+	<meta name="copyright" content="&copy;2009&nbsp;syany" />
+
+	<!-- * LINK
+	****** href、title属性などを修正ください
+	************************************************** -->
+	<!--
+	<link rel="alternate" type="application/rss+xml" href="###URLを入力" title="RSS" />
+	<link rel="top" href="###URLを入力" title="###トップ" />
+	<link rel="index" href="###URLを入力" title="###インデックス" />
+	<link rel="prev" href="###URLを入力" title="###前のページ" />
+	<link rel="next" href="###URLを入力" title="###次のページ" />
+	-->
+	
+	<!-- * LINK 
+	****** スタイルシート
+	*************************************************** -->
+	<link rel="stylesheet" type="text/css" href="./outlineBase.css" media="all" title="Custom" />
+	<link rel="stylesheet" type="text/css" href="./outlineWidth.css" media="all" title="Custom" />
+	<link rel="stylesheet" type="text/css" href="./contentMain.css" media="all" title="Custom" />
+</head>
+<!-- ////////////////////////////////////////////////////////////////////////////////
+/////// BODY
+///////////////////////////////////////////////////////////////////////////////// -->
+<body>
+	<!-- * Outline Container
+	****** 構造クラス コンテナ ブロック全体をセンターに寄せるため必要
+	****** Internet Explorer 6 対応のためにも必要
+	*************************************************** -->
+	<div class="Outline Container">
+	<!-- * Outline Header
+	****** 構造クラス ヘッダ全域
+	*************************************************** -->
+	<div class="Outline Header HeaderLeftColumn" id="PageTop">
+			
+		<div class="HeadTitle">
+			<h1>H1 大本タイトル(=Titleタグ)</h1>
+			<p class="Description">サブタイトル。ページの説明を書きます。</p>
+		</div>
+
+	</div><!-- Outline Header End -->
+	<!-- * Outline Main
+	****** 構造クラス メイン全域
+	*************************************************** -->
+	<div class="Outline Main Clear" id="MainChapter">
+		<!-- * Outline Main Left
+		****** 構造クラス メイン 左側
+		*************************************************** -->
+		<div class="Outline Main Left MainLeftColumn">
+			
+			<div>
+				[メイン左]
+			</div>
+			
+		</div><!-- Outline Main Left End -->
+		<!-- * Outline Main Right
+		****** 構造クラス メイン 中央側＋右側
+		*************************************************** -->
+		<div class="Outline Main Right">
+			<!-- * Outline Main Child Left
+			****** 構造クラス メイン 中央側
+			*************************************************** -->
+			<div class="Outline Main Child Left MainCenterColumn" id="articleTop">
+				
+				<div class="Article">
+					<h2>各種スタイル例（これはH2タグです）</h2>
+					<!-- * ヘッドラインスタイル
+					**************************************** -->
+					<h3>ヘッドラインタグ</h3>
+					<h3>H3 見出し</h3>
+					<h4>H4 小見出し</h4>
+					<h5>H5 小小見出し</h5>
+					<!-- * 基礎スタイル
+					**************************************** -->
+					<h3>基礎スタイル</h3>
+					<p>
+						基本色<br />
+						<a href="#">リンク色</a>
+					</p>
+					<!-- * 表スタイル
+					**************************************** -->
+					<h3>表スタイル</h3>
+					<table>
+						<caption>表説明</caption>
+						<thead>
+							<tr>
+								<th>行＼列</th>
+								<th>列１</th>
+								<th>列２</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>行タイトル</th>
+								<td>内容１</td>
+								<td>内容２</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- * リストスタイル
+					**************************************** -->
+					<h3>リストスタイル</h3>
+					<ol>
+						<li>数字リスト１</li>
+						<li>数字リスト２</li>
+					</ol>
+					<ul>
+						<li>丸リスト　1段目</li>
+						<ul>
+							<li>2段目</li>
+							<ul>
+								<li>3段目リスト</li>
+							</ul>
+						</ul>
+					</ul>
+					<dl>
+						<dt>定義リストタイトル</dt>
+						<dd>内容１</dd>
+						<dd>内容２</dd>
+					</dl>
+				</div>
+				
+				<div class="Article">
+					<h2>各種スタイル例2（これはH2タグです）</h2>
+					<!-- * フォームスタイル
+					**************************************** -->
+					<h3>フォームスタイル</h3>
+					<div class="FormBlock">
+						<form action="#">
+							<fieldset>
+								<legend>チェックをグループ化</legend>
+								<label for="Check1">
+									ラベル
+								</label>
+								<input type="checkbox" id="Check1" />
+								<input type="text" />
+								<input type="button" name="Button1" value="Button1" />
+								<br />
+								<button type="button" name="Button2" value="Button2">
+									Button2
+								</button>
+							</fieldset>
+							<br />
+							<textarea rows="1" cols="15">てきすとえりあ</textarea>
+							<br />
+							<select name="セレクト">
+								<optgroup label="グループ１">
+									<option>オプション１</option>
+									<option>オプション２</option>
+								</optgroup>
+								<optgroup label="グループ２">
+									<option>オプション３</option>
+									<option>オプション４</option>
+								</optgroup>
+							</select>
+						</form>
+					</div>
+					
+					<!-- * そのほかのブロックスタイル
+					**************************************** -->
+					<h3>そのほかのブロックスタイル</h3>
+					<address>リアル住所、ホームページへの住所</address>
+					<blockquote>
+						<p>
+							引用。元内容を記述します。
+							<blockquote>
+								<p>
+									返信の返信など
+								</p>
+							</blockquote>
+						</p>
+					</blockquote>
+					<hr />
+					<pre>そのままの文字列</pre>
+					<del>削除（訂正）文字グループ</del>
+					<ins>追加、変更などのグループ</ins>
+				</div>
+				
+				<div class="Article">
+					<h2>各種スタイル例3（これはH2タグです）</h2>
+					<!-- * 文字スタイル
+					**************************************** -->
+					<h3>文字スタイル</h3>
+					<p>
+						普通文
+						<q>引用文字</q>
+						<em>強調文字</em>
+						<strong>強調文字</strong>
+						<cite>URL関連</cite>
+						<code>コード for include</code>
+						<dfn>定義文字</dfn>
+						<abbr>略字</abbr>
+						<acronym>略字２</acronym>
+						<kbd>Ctrl</kbd>
+						<samp>サンプル</samp>
+					</p>
+				</div>
+				
+			</div><!-- Outline Main Center End -->
+			<!-- * Outline Main Child Right
+			****** 構造クラス メイン 右側
+			*************************************************** -->
+			<div class="Outline Main Child Right MainRightColumn">
+				<!-- * Outline Main Child Left
+				****** 構造クラス メイン 中央側
+				*************************************************** -->
+				<div class="Outline Main GrandChild Left MainRightLeftColumn">
+					
+					<div>
+						[メイン右左]
+					</div>
+					
+				</div><!-- Outline Main Center End -->
+				<!-- * Outline Main Child Right
+				****** 構造クラス メイン 右側
+				*************************************************** -->
+				<div class="Outline Main GrandChild Right MainRightLeftColumn">
+					
+					<div>
+						[メイン右右]
+					</div>
+					
+				</div><!-- Outline Main Right End -->
+			</div><!-- Outline Main Right End -->
+		</div><!-- Outline Main Right End -->
+	</div><!-- Outline Main End -->
+</div><!-- Outline Container End -->
+</body>
+<!-- ////////////////////////////////////////////////////////////////////////////////
+// @(#)propertyGroupTmpl.html 1.00 2009/06/01;
+// 
+// 本書はBSD改め拍手ライセンスです。
+// Copyright (c) 2009 syany
+// All rights reserved.
+// 
+// 1.ソースコード形式であれバイナリ形式であれ、変更の有無に関わらず
+//   以下の条件を満たす限りにおいて、再配布および利用を許可します。
+//  1-1.ソースコード形式で再配布する場合、上記著作権表示、 本条件書
+//    および第2項の責任限定規定を必ず含めてください。
+//  1-2.バイナリ形式で再配布する場合、上記著作権表示、 本条件書
+//    および下記責任限定規定を、配布物とともに提供される文書
+//    および/または他の資料に必ず含めてください。
+// 
+// 2.本ソフトウェアは無保証です。自己責任で使用してください。
+//  2-1.使用、再配布する際、できれば以下のページに拍手をください。
+//    http://ksyany.blog32.fc2.com/blog-entry-51.html
+// 
+// 3.著作権者の名前を、広告や宣伝に勝手に使用しないでください。
+///////////////////////////////////////////////////////////////////////////////// -->
+</html>
